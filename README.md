@@ -31,7 +31,7 @@ Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini 
 *	model: merupakan model dari mobil VW dan masuk pada fitur kategorikal, dari yang paling banyak yaitu model “Golf” dan paling sedikit yaitu model “Eos”.
 *	year : merupakan tahun dari registrasi dan masuk pada fitur numerik (2000-2020)
 *	price: merupakan harga dalam euro (£) dan menjadi fitur target dalam prediksi ini
-*	transmission: merupakan tipe dari gearbox dan masuk pada fitur kategorikal (Manual,Semi-Auto, dan Automatic)
+*	transmission : merupakan tipe dari gearbox dan masuk pada fitur kategorikal (Manual,Semi-Auto, dan Automatic)
 *	mileage : merupakan jarak yang di tempuh dan masuk pada fitur numerik
 *	fuelType : merupakan jenis bahan bakar mesin dan masuk pada fitur kategorikal (Petrol, Diesel, Hybrid, Other)
 *	tax : merupakan pajak jalan dan masuk pada fitur numerik (0-580)

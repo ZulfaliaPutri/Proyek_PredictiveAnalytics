@@ -85,7 +85,6 @@ Dalam data preparation saya melakukan 3 teknik yaitu one-hot-encoding dimana pad
 ![data3](https://user-images.githubusercontent.com/81318203/136744260-c6da3ccc-2972-4e87-8edc-217f36e0fb4f.jpg)
 
 Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunakan untuk membagai dataset menjadi data latih dan data uji yang di perlukan sebelum membuat model. Alasan saya melakukan teknik ini agar dapat memberikan hasil prediksi yang lebih akurat untuk data yang belum pernah di latih terlebih membagi dataset sebelum melakukan tranformasi ditujukan agar tidak megotori data uji dengan informasi yang di dapat dari data latih. Disini saya membagi proporsi data latih dan uji dengan 90:10 dengan jumlah sampel yaitu 13588.
-
 ![data4](https://user-images.githubusercontent.com/81318203/136744306-5189aeb5-7ce3-46a7-b63f-82b0bf8e5503.jpg)
 
 Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana pada standarisasi ini menggunakan fitur numerik dengan teknik StandarScaler dari library Scikitlearn. Pada standarisasi ini menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Alasan saya menggunakan teknik ini untuk menghindari kebocoran informasi pada data uji dan membuat model semakin baik. Dan bila kita lihat pada gambar dibawah ini nilai mean = 0 dan standar deviasi = 1.
@@ -124,7 +123,7 @@ Setelah dibuatkan prediksi maka bila dilihat dari gambar dibawah ini yang member
 
 ![prediksi](https://user-images.githubusercontent.com/81318203/136745536-8446ce3e-14de-4139-9209-25486ca64017.jpg)
 
-##Kesimpulan
+## Kesimpulan
 Dapat disimpulkan berdasarkan problem statement dan goal yang dituliskan diawal bahwa:
 * Fitur yang berpengaruh dengan harga jual mobil VW yaitu ‘year’, ‘mileage’, dan ‘tax’ dimana korelasinya besar dengan price sebagai target
 * Model yang paling tepat dalam memprediksi harga jual mobil bekas yaitu model Random Forest dimana MSE dimiliki nilai errornya kecil dan hasil prediksinya paling mendekati.

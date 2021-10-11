@@ -3,12 +3,12 @@
 ## Domain Proyek
 Jual beli mobil bekas telah berlangsung cukup lama dan menjadikan ceruk bisnis tersendiri. Bahkan banyak sekali showroom mobil bekas yang menawarkan harga dan kualitas yang sepadan. Namun, bagi masyarakat yang ingin menjual mobil bekas harus memperhatikan dan mempertimbangkan berapa harga pasaran mobil yang sesuai dengan harga pasar yang ada Karena tidak mungkin ketika ingin menjual mobil kita memberikan harga yang sama seperti saat kita membeli mobil baru. Kualitas produk mobil bekas pun juga mempengaruhi keputusan konsumen untuk membeli. Karena kualitas mobil bekas menjadi tolak ukur konsumen dalam menilai kelayakan mobil untuk dibeli.
 
-Salah satu mobil bekas yang akan dibahas saat ini adalah “VW” atau bisa disebut “Volkswagen”. Menurut [Wikipedia](https://id.wikipedia.org/wiki/Volkswagen), "Volkswagen" sendiri memiliki arti dalam bahasa jerman yaitu "mobil rakyat". Volkswagen sendiri merupakan pabrik otomotif berbasis di Wolfsburg, Lower Saxony, Jerman. Dari artikel [idntimes](https://www.idntimes.com/automotive/car/meiska-irena-pramudhita-1/5-hal-ini-bikin-vw-klasik-masih-banyak-diburu-bisa-buat-investasi/5) alasan seseorang menyukai mobil VW salah satunya adalah desain yang ikonik serta bisa menjadi investasi. Dari penjelasan diatas, membuat saya memilih menggunakan dataset penjualan mobil bekas “VW” untuk proyek ini. 
+Salah satu mobil bekas yang akan dibahas saat ini adalah “VW” atau bisa disebut **Volkswagen**. Menurut [Wikipedia](https://id.wikipedia.org/wiki/Volkswagen), "Volkswagen" sendiri memiliki arti dalam bahasa jerman yaitu "mobil rakyat". Volkswagen sendiri merupakan pabrik otomotif berbasis di Wolfsburg, Lower Saxony, Jerman. Dari artikel [idntimes](https://www.idntimes.com/automotive/car/meiska-irena-pramudhita-1/5-hal-ini-bikin-vw-klasik-masih-banyak-diburu-bisa-buat-investasi/5) alasan seseorang menyukai mobil VW salah satunya adalah desain yang ikonik serta bisa menjadi investasi. Dari penjelasan diatas, membuat saya memilih menggunakan dataset penjualan mobil bekas “VW” untuk proyek ini. 
 
-Pada dataset ini terdiri dari informasi harga, transmisi, jarak tempuh, jenis bahan bakar, pajak jalan, mil per galon (mpg), dan ukuran mesin, model mobil, dan tahun pendaftaran. Serta dalam proyek ini memiliki tujuan untuk memprediksi harga jual dari mobil bekas dengan merek VW. Dengan predictive analytic diharapkan dapat memprediksi solusi dari permasalahan ini.
+Pada dataset ini terdiri dari informasi harga, transmisi, jarak tempuh, jenis bahan bakar, pajak jalan, mil per galon (mpg), dan ukuran mesin, model mobil, dan tahun pendaftaran. Serta dalam proyek ini memiliki tujuan untuk memprediksi harga jual dari mobil bekas dengan merek VW. Dengan *predictive analytic* diharapkan dapat memprediksi solusi dari permasalahan ini.
 
 ## Business Understanding
-Bagi seseorang yang ingin menjual mobilnya perlu mengetahui harga pasar dari mobil tersebut. Oleh karena itu perlu adanya sistem dalam memprediksi harga jual mobil bekas VW dengan teknik predictive modelling. Semisal, saat menjual mobil kita memasang harga yang sama dengan harga jual mobil dengan kualitas mobil yang tidak sama dengan mobil baru maka pelanggan yang ingin membeli mobil bekas tidak mengambil mobil yang kita jual dan lebih memilih mobil bekas dengan harga murah dan kualitas mobilnya yang lumayan bagus. Dari kasus ini yang menyebabkan penjual mobil bekas memerlukan sistem untuk memprediksi harga.
+Bagi seseorang yang ingin menjual mobilnya perlu mengetahui harga pasar dari mobil tersebut. Oleh karena itu perlu adanya sistem dalam memprediksi harga jual mobil bekas VW dengan teknik *predictive modelling*. Semisal, saat menjual mobil kita memasang harga yang sama dengan harga jual mobil dengan kualitas mobil yang tidak sama dengan mobil baru maka pelanggan yang ingin membeli mobil bekas tidak mengambil mobil yang kita jual dan lebih memilih mobil bekas dengan harga murah dan kualitas mobilnya yang lumayan bagus. Dari kasus ini yang menyebabkan penjual mobil bekas memerlukan sistem untuk memprediksi harga.
 
 ### Problem Statements 
 Dari kondisi diatas, maka kita dapat membuat prediksi harga jual mobil sebagai berikut:
@@ -31,7 +31,7 @@ Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price seba
 
 ## Data Understanding
 Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini memiliki 15.157 jenis mobil merek VW dengan beberapa fitur baik fitur numerik dan kategorikal. Penggunaan metrik pada prediksi ini menggunakan *Mean Squared Error* (MSE). Untuk variable yang ada pada dataset [100,000 UK Used Car Data set](https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes) adalah sebagai berikut:
-*	model: merupakan model dari mobil VW dan masuk pada fitur kategorikal, dari yang paling banyak yaitu model “Golf” dan paling sedikit yaitu model “Eos”.
+*	model: merupakan model dari mobil VW dan masuk pada fitur kategorikal, dari yang paling banyak yaitu model **Golf** dan paling sedikit yaitu model **Eos**.
 *	year : merupakan tahun dari registrasi dan masuk pada fitur numerik (2000-2020)
 *	price: merupakan harga dalam euro (£) dan menjadi fitur target dalam prediksi ini
 *	transmission : merupakan tipe dari gearbox dan masuk pada fitur kategorikal (Manual,Semi-Auto, dan Automatic)
@@ -57,12 +57,12 @@ Selanjutnya untuk fitur kedua yaitu transmission akan menampilkan tipe dari gear
 
 ![trans1](https://user-images.githubusercontent.com/81318203/136741051-b76b9312-bb2e-4055-a5cc-1b6c1e7736c3.jpg)
 ![trans2](https://user-images.githubusercontent.com/81318203/136741059-7db5b374-59c1-481b-b662-02b4f3c05868.jpg)
-Pada fitur ini memiliki 3 kategori yang terdiri dari tipe manual, semiauto dan automatic. Bila dilihat dari persentase, data “Manual” memiliki persentase terbanyak yaitu 62% sedangkan “Semi-Auto” memiliki persentase terbanyak kedua yaitu 25 % dan persentase terkecil berada pada “Automatic”. Sehingga untuk transmission yang memiliki grade tertinggi yaitu Manual.
+Pada fitur ini memiliki 3 kategori yang terdiri dari tipe manual, semiauto dan automatic. Bila dilihat dari persentase, data “Manual” memiliki persentase terbanyak yaitu **62%** sedangkan “Semi-Auto” memiliki persentase terbanyak kedua yaitu **25 %** dan persentase terkecil berada pada “Automatic”. Sehingga untuk transmission yang memiliki grade tertinggi yaitu Manual.
 
 Dan untuk fitur yang terakhir yaitu fuel type dimana pada data ini menampilkan jenis bahan bakar.
 ![type1](https://user-images.githubusercontent.com/81318203/136741942-60a7d96f-f33b-434a-9211-b6e4ddefed8a.jpg)
 ![type2](https://user-images.githubusercontent.com/81318203/136741946-ec4b6d09-c671-4567-ac09-64914187121c.jpg)
-Terdapat 4 kategori pada fitur fuel type yaitu diesel, hybrid, petrol dan other. Bila dilihat dari jumlah sampel maka penggunaan jenis bahan bakar terbanyak ke terendah memiliki uruatan sebagai berikut yaitu petrol, diesel, other dan hybrid. Saat dilihat dari persentase maka 60% grade tertinggi dari jenis bahan bakar ada pada petrol.
+Terdapat 4 kategori pada fitur fuel type yaitu diesel, hybrid, petrol dan other. Bila dilihat dari jumlah sampel maka penggunaan jenis bahan bakar terbanyak ke terendah memiliki uruatan sebagai berikut yaitu petrol, diesel, other dan hybrid. Saat dilihat dari persentase maka **60%** grade tertinggi dari jenis bahan bakar ada pada petrol.
 
 ![kategori1](https://user-images.githubusercontent.com/81318203/136742517-3920474a-ef98-4559-bedf-51276ac2a822.jpg)
 ![kategori2](https://user-images.githubusercontent.com/81318203/136742522-80586916-3e21-4d65-9975-6ff34b53c80e.jpg)
@@ -104,7 +104,7 @@ Pada proyek ini saya menggunakan 3 model seperti yang tertera pada solution stat
 Bila di lihat dari ketiga model ini setelah dilakukan pelatihan maka didapatkan solusi terbaik berada pada model Random Forest dimana penjelasannya akan ada pada tahap “Evaluation”.
 
 ## Evaluation
-Disini kita menggunakan metrik yang akan digunakan pada prediksi yaitu Mean Squared Error(MSE) untuk menghitung selisih rata-rata nilai sebenarnya dengan nilai prediksi. Bila didefinisikan dalam persamaan maka akan seperti berikut:
+Disini kita menggunakan metrik yang akan digunakan pada prediksi yaitu *Mean Squared Error*(MSE) untuk menghitung selisih rata-rata nilai sebenarnya dengan nilai prediksi. Bila didefinisikan dalam persamaan maka akan seperti berikut:
 ![mse1](https://user-images.githubusercontent.com/81318203/136745371-24858e44-a2af-439d-a668-345c694f355e.jpg)
 
 Keterangan:
@@ -116,7 +116,7 @@ Langkah selanjutnya sebelum menghitung MSE yaitu melakukan proses scaling dari f
 
 ![mse2](https://user-images.githubusercontent.com/81318203/136745438-259d4521-f468-400c-9216-520e26f2df59.jpg)
 
-Bila dilihat dari gambar diatas bahwa mse pada test dan train  dari model Random Forest memiliki nilai yang kecil dibandingkan dengan model mse Decision Tree dan Boosting. Untuk memudahkan melihat metrik diatas maka dibuatkan bar chart seperti gambar dibawah ini. Bila dilihat dari gambar model random forest memiliki nilai error yang lebih kecil sehingga model random forest dijadikan model terbaik dan digunakan untuk prediksi harga jual mobil.
+Bila dilihat dari gambar diatas bahwa mse pada test dan train  dari model Random Forest memiliki nilai yang kecil dibandingkan dengan model mse Decision Tree dan Boosting. Untuk memudahkan melihat metrik diatas maka dibuatkan *bar chart* seperti gambar dibawah ini. Bila dilihat dari gambar model random forest memiliki nilai error yang lebih kecil sehingga model random forest dijadikan model terbaik dan digunakan untuk prediksi harga jual mobil.
 
 ![grafik](https://user-images.githubusercontent.com/81318203/136745502-4b9260bc-ac0e-4ecd-b345-46b07b1bd0fd.jpg)
 

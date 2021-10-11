@@ -30,7 +30,7 @@ Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price seba
 <br>AdaBoost atau Adaptive Boost merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Cara kerja dari AdaBoost sendiri yaitu pada awal suatu kasus memiliki data latih dengan weight atau bobot yang sama. Bobot yang lebih tinggi kemudian diberikan pada model yang salah sehingga mereka akan dimasukkan ke dalam tahapan selanjutnya. Proses iteratif ini berlanjut sampai model mencapai akurasi yang diinginkan. Kelebihan dari model ini yaitu relatif lebih mudah untuk diimplementasikan dan waktu pengujian yang relatif cepat sehingga cocok dipakai dalam implementasi kondisi real time.</br>
 
 ## Data Understanding
-Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini memiliki 15.157 jenis mobil merek VW dengan beberapa fitur baik fitur numerik dan kategorikal. Untuk variable yang ada pada dataset [100,000 UK Used Car Data set](https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes) adalah sebagai berikut:
+Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini memiliki 15.157 jenis mobil merek VW dengan beberapa fitur baik fitur numerik dan kategorikal. Untuk variable yang ada pada dataset [100,000 UK Used Car Data set](https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv) adalah sebagai berikut:
 
 *	model: merupakan model dari mobil VW dan masuk pada fitur kategorikal, dari yang paling banyak yaitu model **Golf** dan paling sedikit yaitu model **Eos**.
 *	year : merupakan tahun dari registrasi dan masuk pada fitur numerik (2000-2020)

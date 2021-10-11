@@ -86,7 +86,6 @@ Dalam data preparation saya melakukan 3 teknik yaitu one-hot-encoding dimana pad
 
 Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunakan untuk membagai dataset menjadi data latih dan data uji yang di perlukan sebelum membuat model. Alasan saya melakukan teknik ini agar dapat memberikan hasil prediksi yang lebih akurat untuk data yang belum pernah di latih terlebih membagi dataset sebelum melakukan tranformasi ditujukan agar tidak megotori data uji dengan informasi yang di dapat dari data latih. Disini saya membagi proporsi data latih dan uji dengan 90:10 dengan jumlah sampel yaitu 13588.
 ![data4](https://user-images.githubusercontent.com/81318203/136744306-5189aeb5-7ce3-46a7-b63f-82b0bf8e5503.jpg)
-
 Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana pada standarisasi ini menggunakan fitur numerik dengan teknik StandarScaler dari library Scikitlearn. Pada standarisasi ini menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Alasan saya menggunakan teknik ini untuk menghindari kebocoran informasi pada data uji dan membuat model semakin baik. Dan bila kita lihat pada gambar dibawah ini nilai mean = 0 dan standar deviasi = 1.
 ![data5](https://user-images.githubusercontent.com/81318203/136744364-032e5d96-d6a1-4495-9d00-7ff6e5f130a9.jpg)
 
@@ -104,18 +103,22 @@ Bila di lihat dari ketiga model ini setelah dilakukan pelatihan maka didapatkan 
 ## Evaluation
 Disini kita menggunakan metrik yang akan digunakan pada prediksi yaitu Mean Squared Error(MSE) untuk menghitung selisih rata-rata nilai sebenarnya dengan nilai prediksi. Bila didefinisikan dalam persamaan maka akan seperti berikut:
 ![mse1](https://user-images.githubusercontent.com/81318203/136745371-24858e44-a2af-439d-a668-345c694f355e.jpg)
+
 Keterangan:
 N = jumlah dataset
 yi = nilai sebenarnya
 y_pred = nilai prediksi
 
 Langkah selanjutnya sebelum menghitung MSE yaitu melakukan proses scaling dari fitur numerik pada data uji dimana pada langkah sebelumnya telah dilakukan proses scaling pada data latih. Setelah selesai pada proses scaling dilanjutkan ke evaluasi dari tiga model machine learning yaitu Decision Tree, Random Forest, dan Adaboost dengan metrik MSE. Berikut ini merupakan hasil dari evaluasi data latih dan data test yaitu:
+
 ![mse2](https://user-images.githubusercontent.com/81318203/136745438-259d4521-f468-400c-9216-520e26f2df59.jpg)
 
 Bila dilihat dari gambar diatas bahwa mse pada test dan train  dari model Random Forest memiliki nilai yang kecil dibandingkan dengan model mse Decision Tree dan Boosting. Untuk memudahkan melihat metrik diatas maka dibuatkan bar chart seperti gambar dibawah ini. Bila dilihat dari gambar model random forest memiliki nilai error yang lebih kecil sehingga model random forest dijadikan model terbaik dan digunakan untuk prediksi harga jual mobil.
+
 ![grafik](https://user-images.githubusercontent.com/81318203/136745502-4b9260bc-ac0e-4ecd-b345-46b07b1bd0fd.jpg)
 
 Setelah dibuatkan prediksi maka bila dilihat dari gambar dibawah ini yang memberikan prediksi paling mendekati yaitu Random Forest. Sehingga jika kita lihat dari MSE yang memiliki nilai error kecil yaitu model Random forest jadi bisa di pastikan bahwa model ini menjadi solusi baik untuk memprediksi harga jual mobil bekas VW.
+
 ![prediksi](https://user-images.githubusercontent.com/81318203/136745536-8446ce3e-14de-4139-9209-25486ca64017.jpg)
 
 ##Kesimpulan

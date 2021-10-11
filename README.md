@@ -22,9 +22,9 @@ Dari pernyaatan masalah diatas maka kita dapat membuat tujuan atau goals seperti
 
 ### Solution Statements 
 Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price sebagai target. Dalam penyelesaian masalah ini, saya menggunakan 3 solusi model algoritma machine learning yang memiliki penjelasan sebagai berikut:
-* <b>Decision Tree</b>: Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan     regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki   kelebihan yaitu dibuat secara numerik atau kategorik dan memerlukan sedikit pemrosesan data di awal pembuatan.
-* Random Forest
+* <b>Decision Tree</b> : Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan     regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki   kelebihan yaitu dibuat secara numerik atau kategorik dan memerlukan sedikit pemrosesan data di awal pembuatan.
+* <b>Random Forest</b> : Pada algoritma ini disusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak.Penggunaan random forest mampu mengklasifiksi data yang memiliki atribut yang tidak lengkap dan dapat digunakan untuk menangani data sampel yang banyak. 
+* <b>AdaBoost</b> : AdaBoost atau Adaptive Boost merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Cara kerja dari AdaBoost sendiri yaitu pada awal suatu kasus memiliki data latih dengan weight atau bobot yang sama. Bobot yang lebih tinggi kemudian diberikan pada model yang salah sehingga mereka akan dimasukkan ke dalam tahapan selanjutnya. Proses iteratif ini berlanjut sampai model mencapai akurasi yang diinginkan. Kelebihan dari model ini yaitu relatif lebih mudah untuk diimplementasikan dan waktu pengujian yang relatif cepat sehingga cocok dipakai dalam implementasi kondisi real time.
 
-  Pada algoritma ini disusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak.       Penggunaan random forest mampu mengklasifiksi data yang memiliki atribut yang tidak lengkap dan dapat digunakan   untuk menangani data sampel yang banyak. 
-* AdaBoost
+
 

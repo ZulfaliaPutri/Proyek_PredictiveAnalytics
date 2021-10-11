@@ -51,6 +51,7 @@ Kemudian pada analisis univariate dan multivariate terdapat visualisasi data yan
 Bila dilihat dari grafik terdapat 25 kategori model mobil VW. Bila kita urutkan fitur model dari jumlah terbanyak ke terkecil yaitu Golf, Polo, Tiguan, Up, Passat, T-Roc, Touran, T-Cross, Sharan, Arteon, Golf SV, Scirocco, Touareg, Amarok, Tiguan Allspace, CC, Betle, Shuttle, Caddy Maxi Life, Jetta, Caravelle, Caddy Life, Caddy, Caddy Maxi, Eof. Pada jumlah sampel untuk model yang memiliki jumlah terbanyak adalah Golf sedangkan untuk model “Eos” memiliki jumlah data paling sedikit. Dan bila dilihat dari persentase maka lebih dari 60% model yang masuk pada grade tinggi yaitu Golf, Polo, Tiguan.
 
 Selanjutnya untuk fitur kedua yaitu transmission akan menampilkan tipe dari gearbox. 
+
 ![trans1](https://user-images.githubusercontent.com/81318203/136741051-b76b9312-bb2e-4055-a5cc-1b6c1e7736c3.jpg)
 ![trans2](https://user-images.githubusercontent.com/81318203/136741059-7db5b374-59c1-481b-b662-02b4f3c05868.jpg)
 Pada fitur ini memiliki 3 kategori yang terdiri dari tipe manual, semiauto dan automatic. Bila dilihat dari persentase, data “Manual” memiliki persentase terbanyak yaitu 62% sedangkan “Semi-Auto” memiliki persentase terbanyak kedua yaitu 25 % dan persentase terkecil berada pada “Automatic”. Sehingga untuk transmission yang memiliki grade tertinggi yaitu Manual.
@@ -71,6 +72,7 @@ Selanjutnya bila kita analisis dengan teknik Multivariate EDA dari fitur numerik
 ![numerik2](https://user-images.githubusercontent.com/81318203/136742696-1d8fd5d9-6f40-4935-a926-8c5ee6b990aa.jpg)
 
 Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fiur numerik yang didapat. Dimana fitur year, mileage, tax dan mpg memiliki nilai korelasi yang besar dengan fitur price seperti year mendapat skor 1, price mendapat skor 0.62, mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor 0.48. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur engineSize memiliki korelasi yang kecil dimana nilainya mendekati nilai 0 yaitu 0.01. Oleh karena itu untuk fitur engineSize di drop karena memiliki korelasi yang lemah.
+
 ![korelasi1](https://user-images.githubusercontent.com/81318203/136742764-0f5ad501-c872-40df-b354-8204c9b98516.jpg)
 
 ## Data Preparation

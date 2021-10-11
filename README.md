@@ -31,6 +31,7 @@ Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price seba
 
 ## Data Understanding
 Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini memiliki 15.157 jenis mobil merek VW dengan beberapa fitur baik fitur numerik dan kategorikal. Untuk variable yang ada pada dataset [100,000 UK Used Car Data set](https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes) adalah sebagai berikut:
+
 *	model: merupakan model dari mobil VW dan masuk pada fitur kategorikal, dari yang paling banyak yaitu model **Golf** dan paling sedikit yaitu model **Eos**.
 *	year : merupakan tahun dari registrasi dan masuk pada fitur numerik (2000-2020)
 *	price: merupakan harga dalam euro (£) dan menjadi fitur target dalam prediksi ini

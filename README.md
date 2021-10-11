@@ -24,7 +24,23 @@ Dari pernyaatan masalah diatas maka kita dapat membuat tujuan atau goals seperti
 Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price sebagai target. Dalam penyelesaian masalah ini, saya menggunakan 3 solusi model algoritma machine learning yang memiliki penjelasan sebagai berikut:
 * <b>Decision Tree</b> : Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan     regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki   kelebihan yaitu dibuat secara numerik atau kategorik dan memerlukan sedikit pemrosesan data di awal pembuatan.
 * <b>Random Forest</b> : Pada algoritma ini disusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak.Penggunaan random forest mampu mengklasifiksi data yang memiliki atribut yang tidak lengkap dan dapat digunakan untuk menangani data sampel yang banyak. 
-* <b>AdaBoost</b> : AdaBoost atau Adaptive Boost merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Cara kerja dari AdaBoost sendiri yaitu pada awal suatu kasus memiliki data latih dengan weight atau bobot yang sama. Bobot yang lebih tinggi kemudian diberikan pada model yang salah sehingga mereka akan dimasukkan ke dalam tahapan selanjutnya. Proses iteratif ini berlanjut sampai model mencapai akurasi yang diinginkan. Kelebihan dari model ini yaitu relatif lebih mudah untuk diimplementasikan dan waktu pengujian yang relatif cepat sehingga cocok dipakai dalam implementasi kondisi real time.
+* <b>AdaBoost (Boosting)</b> : AdaBoost atau Adaptive Boost merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Cara kerja dari AdaBoost sendiri yaitu pada awal suatu kasus memiliki data latih dengan weight atau bobot yang sama. Bobot yang lebih tinggi kemudian diberikan pada model yang salah sehingga mereka akan dimasukkan ke dalam tahapan selanjutnya. Proses iteratif ini berlanjut sampai model mencapai akurasi yang diinginkan. Kelebihan dari model ini yaitu relatif lebih mudah untuk diimplementasikan dan waktu pengujian yang relatif cepat sehingga cocok dipakai dalam implementasi kondisi real time.
+
+## Data Understanding
+Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini memiliki 15.157 jenis mobil merek VW dengan beberapa fitur baik fitur numerik dan kategorikal. Penggunaan metrik pada prediksi ini menggunakan Mean Squared Error (MSE). Untuk variable yang ada pada dataset [100,000 UK Used Car Data set](https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes) adalah sebagai berikut:
+*	model: merupakan model dari mobil VW dan masuk pada fitur kategorikal, dari yang paling banyak yaitu model “Golf” dan paling sedikit yaitu model “Eos”.
+*	year : merupakan tahun dari registrasi dan masuk pada fitur numerik (2000-2020)
+*	price: merupakan harga dalam euro (£) dan menjadi fitur target dalam prediksi ini
+*	transmission: merupakan tipe dari gearbox dan masuk pada fitur kategorikal (Manual,Semi-Auto, dan Automatic)
+*	mileage : merupakan jarak yang di tempuh dan masuk pada fitur numerik
+*	fuelType : merupakan jenis bahan bakar mesin dan masuk pada fitur kategorikal (Petrol, Diesel, Hybrid, Other)
+*	tax : merupakan pajak jalan dan masuk pada fitur numerik (0-580)
+*	mpg : merupakan mil per gallon dan masuk pada fitur numerik (0.3-188)
+*	engineSize : merupakan ukuran mesin dan masuk pada fitur numerik (0-3.2)
+
+Untuk proyek ini saya terdapat tahapan salah satunya yaitu teknik visualisasi data. Penjelasan serta visualisasi data akan dibahas sebagai berikut:
+
+Pada tahapan data understanding terdapat penanganan outliers dimana pada saat mengecek outliers menggunakan teknik visualisasi data dengan menggunakan boxplot. Visualisasi data outliers dilakukan pada fitur numerik. Pada fitur numerik terdiri dari year, price, mileage, mpg, engineSize, dan tax.
 
 
 

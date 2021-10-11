@@ -108,8 +108,11 @@ Disini kita menggunakan metrik yang akan digunakan pada prediksi yaitu *Mean Squ
 ![mse1](https://user-images.githubusercontent.com/81318203/136745371-24858e44-a2af-439d-a668-345c694f355e.jpg)
 
 Keterangan:
+
 N = jumlah dataset
+
 yi = nilai sebenarnya
+
 y_pred = nilai prediksi
 
 Langkah selanjutnya sebelum menghitung MSE yaitu melakukan proses scaling dari fitur numerik pada data uji dimana pada langkah sebelumnya telah dilakukan proses scaling pada data latih. Setelah selesai pada proses scaling dilanjutkan ke evaluasi dari tiga model machine learning yaitu Decision Tree, Random Forest, dan Adaboost dengan metrik MSE. Berikut ini merupakan hasil dari evaluasi data latih dan data test yaitu:

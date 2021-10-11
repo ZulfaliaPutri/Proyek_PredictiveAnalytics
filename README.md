@@ -101,6 +101,7 @@ Pada proyek ini saya menggunakan 3 model seperti yang tertera pada solution stat
 <br>Pada model ini sendiri tersusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak. Disini saya menggunakan teknik RandomForestRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error dimana menggunakan teknik mean_squared_error dari library Scikitlearn. Disini saya juga menggunakan paramter *n_estimators=35*, *max_depth=12*, *random_state=50*,  dan *n_jobs=-1*.<br>
 * AddBoost(Boosting) 	
 <br>Pada model ini sendiri merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Disini saya menggunakan teknik AdaBoostRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error. Disini saya juga menggunakan paramter n_estimators=35, learning_rate=0.05, dan random_state=30.</br>
+
 Bila di lihat dari ketiga model ini setelah dilakukan pelatihan maka didapatkan solusi terbaik berada pada model Random Forest dimana penjelasannya akan ada pada tahap “Evaluation”.
 
 ## Evaluation

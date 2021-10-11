@@ -86,6 +86,7 @@ Dalam data preparation saya melakukan 3 teknik yaitu one-hot-encoding dimana pad
 
 Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunakan untuk membagai dataset menjadi data latih dan data uji yang di perlukan sebelum membuat model. Alasan saya melakukan teknik ini agar dapat memberikan hasil prediksi yang lebih akurat untuk data yang belum pernah di latih terlebih membagi dataset sebelum melakukan tranformasi ditujukan agar tidak megotori data uji dengan informasi yang di dapat dari data latih. Disini saya membagi proporsi data latih dan uji dengan 90:10 dengan jumlah sampel yaitu 13588.
 ![data4](https://user-images.githubusercontent.com/81318203/136744306-5189aeb5-7ce3-46a7-b63f-82b0bf8e5503.jpg)
+
 Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana pada standarisasi ini menggunakan fitur numerik dengan teknik StandarScaler dari library Scikitlearn. Pada standarisasi ini menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Alasan saya menggunakan teknik ini untuk menghindari kebocoran informasi pada data uji dan membuat model semakin baik. Dan bila kita lihat pada gambar dibawah ini nilai mean = 0 dan standar deviasi = 1.
 
 ![data5](https://user-images.githubusercontent.com/81318203/136744364-032e5d96-d6a1-4495-9d00-7ff6e5f130a9.jpg)

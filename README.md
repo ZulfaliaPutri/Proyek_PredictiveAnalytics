@@ -23,7 +23,7 @@ Dari pernyaatan masalah diatas maka kita dapat membuat tujuan atau goals seperti
 ### Solution Statements 
 Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price sebagai target. Dalam penyelesaian masalah ini, saya menggunakan 3 solusi model algoritma machine learning yang memiliki penjelasan sebagai berikut:
 * <b>Decision Tree</b> 
-<br>Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan  regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki kelebihan yaitu dibuat secara numerik atau kategorik dan memerlukan sedikit pemrosesan data di awal pembuatan.</br>
+<br>Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan  regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki kelebihan yaitu mudah dipahami dan ditafsirkan serta lebih sedikit pembersihan data yang diperlukan </br>
 * <b>Random Forest</b>
 <br>Pada algoritma ini disusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak.Penggunaan random forest mampu mengklasifiksi data yang memiliki atribut yang tidak lengkap dan dapat digunakan untuk menangani data sampel yang banyak.</br>
 * <b>AdaBoost (Boosting)</b> 

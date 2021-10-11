@@ -8,7 +8,7 @@ Salah satu mobil bekas yang akan dibahas saat ini adalah “VW” atau bisa dise
 Pada dataset ini terdiri dari informasi harga, transmisi, jarak tempuh, jenis bahan bakar, pajak jalan, mil per galon (mpg), dan ukuran mesin, model mobil, dan tahun pendaftaran. Serta dalam proyek ini memiliki tujuan untuk memprediksi harga jual dari mobil bekas merek VW. Dengan *predictive analytic* diharapkan dapat memprediksi solusi dari permasalahan ini.
 
 ## Business Understanding
-Bagi seseorang yang ingin menjual mobilnya perlu mengetahui harga pasar dari mobil tersebut. Oleh karena itu perlu adanya sistem dalam memprediksi harga jual mobil bekas VW dengan teknik *predictive modelling*. Semisal, saat menjual mobil kita memasang harga yang sama dengan harga jual mobil dengan kualitas mobil yang tidak sama dengan mobil baru maka pelanggan yang ingin membeli mobil bekas tidak mengambil mobil yang kita jual dan lebih memilih mobil bekas dengan harga murah dan kualitas mobilnya yang lumayan bagus. Dari kasus ini yang menyebabkan penjual mobil bekas memerlukan sistem untuk memprediksi harga.
+Bagi seseorang yang ingin menjual mobilnya perlu mengetahui harga pasar dari mobil tersebut. Oleh karena itu perlu adanya sistem dalam memprediksi harga jual mobil bekas VW dengan teknik *predictive modelling*. Semisal, saat menjual mobil kita memasang harga yang sama dengan harga jual mobil baru maka pelanggan lebih memilih membeli mobil baru dibandingkan membeli mobil bekas. Dari kasus ini yang menyebabkan penjual mobil bekas memerlukan sistem untuk memprediksi harga.
 
 ### Problem Statements 
 Dari kondisi diatas, maka kita dapat membuat prediksi harga jual mobil sebagai berikut:

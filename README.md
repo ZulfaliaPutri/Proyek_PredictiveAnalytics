@@ -41,6 +41,7 @@ Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini 
 Untuk proyek ini saya terdapat tahapan salah satunya yaitu teknik visualisasi data. Penjelasan serta visualisasi data akan dibahas sebagai berikut:
 
 Pada tahapan data understanding terdapat penanganan outliers dimana pada saat mengecek outliers menggunakan teknik visualisasi data dengan menggunakan boxplot. Visualisasi data outliers dilakukan pada fitur numerik. Pada fitur numerik terdiri dari year, price, mileage, mpg, engineSize, dan tax.
+
 ![outliers1 jpg](https://user-images.githubusercontent.com/81318203/136737513-793341f2-5fee-4a78-a88b-c91e465bfd44.png)
 ![outliers3](https://user-images.githubusercontent.com/81318203/136737737-79f44601-c400-4535-aa13-799908f382ed.png)
 

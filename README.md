@@ -72,6 +72,7 @@ Kemudian pada analisis univariate dari fitur numerik dapat dilihat pada gambar h
 ![numerik1](https://user-images.githubusercontent.com/81318203/136742614-8d1fc0a1-6710-4f3d-bebb-29eb8fec857a.jpg)
 
 Selanjutnya bila kita analisis dengan teknik Multivariate EDA dari fitur numerik dapat kita amati hubungan antar fitur numerik dengan menggunakan fungsi pairplot. Dari gambar dibawah ini bila kita liat dari pola sebaran grafik terlihat year, mileage, dan mpg memiliki korelasi tinggi dengan “price” sedangkan tax dan engineSize memiliki korelasi yang lemah karena tidak adanya bentuk pola sebaran. Oleh karena itu, untuk memastikan korelasi yang didapat tadi benar maka dapat mengeceknya dengan menggunakan fungsi corr().
+
 ![numerik2](https://user-images.githubusercontent.com/81318203/136742696-1d8fd5d9-6f40-4935-a926-8c5ee6b990aa.jpg)
 
 Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fiur numerik yang didapat. Dimana fitur year, mileage, tax dan mpg memiliki nilai korelasi yang besar dengan fitur price seperti year mendapat skor 1, price mendapat skor 0.62, mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor 0.48. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur engineSize memiliki korelasi yang kecil dimana nilainya mendekati nilai 0 yaitu 0.01. Oleh karena itu untuk fitur engineSize di drop karena memiliki korelasi yang lemah.

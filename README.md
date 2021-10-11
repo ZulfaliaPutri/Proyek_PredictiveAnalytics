@@ -22,9 +22,12 @@ Dari pernyaatan masalah diatas maka kita dapat membuat tujuan atau goals seperti
 
 ### Solution Statements 
 Saat memprediksi harga jual mobil, saya menggunakan model regresi dan price sebagai target. Dalam penyelesaian masalah ini, saya menggunakan 3 solusi model algoritma machine learning yang memiliki penjelasan sebagai berikut:
-* <b>Decision Tree</b> : Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan     regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki   kelebihan yaitu dibuat secara numerik atau kategorik dan memerlukan sedikit pemrosesan data di awal pembuatan.
-* <b>Random Forest</b> : Pada algoritma ini disusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak.Penggunaan random forest mampu mengklasifiksi data yang memiliki atribut yang tidak lengkap dan dapat digunakan untuk menangani data sampel yang banyak. 
-* <b>AdaBoost (Boosting)</b> : AdaBoost atau Adaptive Boost merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Cara kerja dari AdaBoost sendiri yaitu pada awal suatu kasus memiliki data latih dengan weight atau bobot yang sama. Bobot yang lebih tinggi kemudian diberikan pada model yang salah sehingga mereka akan dimasukkan ke dalam tahapan selanjutnya. Proses iteratif ini berlanjut sampai model mencapai akurasi yang diinginkan. Kelebihan dari model ini yaitu relatif lebih mudah untuk diimplementasikan dan waktu pengujian yang relatif cepat sehingga cocok dipakai dalam implementasi kondisi real time.
+* <b>Decision Tree</b> 
+<br>Model ini merupakan salah satu algoritma supervised learning yang dapat dipakai untuk masalah klasifikasi dan  regresi.Decision tree juga merupakan komponen pembangun utama algoritma Random Forest. Pada model ini, memiliki kelebihan yaitu dibuat secara numerik atau kategorik dan memerlukan sedikit pemrosesan data di awal pembuatan.</br>
+* <b>Random Forest</b>
+<br>Pada algoritma ini disusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak.Penggunaan random forest mampu mengklasifiksi data yang memiliki atribut yang tidak lengkap dan dapat digunakan untuk menangani data sampel yang banyak.</br>
+* <b>AdaBoost (Boosting)</b> 
+<br>AdaBoost atau Adaptive Boost merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Cara kerja dari AdaBoost sendiri yaitu pada awal suatu kasus memiliki data latih dengan weight atau bobot yang sama. Bobot yang lebih tinggi kemudian diberikan pada model yang salah sehingga mereka akan dimasukkan ke dalam tahapan selanjutnya. Proses iteratif ini berlanjut sampai model mencapai akurasi yang diinginkan. Kelebihan dari model ini yaitu relatif lebih mudah untuk diimplementasikan dan waktu pengujian yang relatif cepat sehingga cocok dipakai dalam implementasi kondisi real time.</br>
 
 ## Data Understanding
 Pada proyek ini saya menggunakan dataset yang tersedia pada Kaggle. Dataset ini memiliki 15.157 jenis mobil merek VW dengan beberapa fitur baik fitur numerik dan kategorikal. Penggunaan metrik pada prediksi ini menggunakan *Mean Squared Error* (MSE). Untuk variable yang ada pada dataset [100,000 UK Used Car Data set](https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes) adalah sebagai berikut:
@@ -76,3 +79,46 @@ Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik unt
 ![korelasi1](https://user-images.githubusercontent.com/81318203/136742764-0f5ad501-c872-40df-b354-8204c9b98516.jpg)
 
 ## Data Preparation
+Dalam data preparation saya melakukan 3 teknik yaitu one-hot-encoding dimana pada teknik ini menggunakan fitur kategori. Dalam melakukan proses ini terdapat penggunaan fitur get_dummies. Penggunaan proses ini dimaksudkan untuk membuat kolom baru dari fitur kategorikal kita di mana setiap kategori menjadi kolom baru dengan nilai 0 atau 1. Seperti gambar dibawah berikut dimana kategori membuat kolom baru. Alasan saya mengguanakan teknik ini karena pada proses ini masih terdapat kategori sehingga perlu dibuat ke numerik agar model dapat membacanya dengan mudah.
+
+![data2](https://user-images.githubusercontent.com/81318203/136744240-d71f2430-7519-4247-8fb5-2c531abb5e6c.jpg)
+![data3](https://user-images.githubusercontent.com/81318203/136744260-c6da3ccc-2972-4e87-8edc-217f36e0fb4f.jpg)
+
+Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunakan untuk membagai dataset menjadi data latih dan data uji yang di perlukan sebelum membuat model. Alasan saya melakukan teknik ini agar dapat memberikan hasil prediksi yang lebih akurat untuk data yang belum pernah di latih terlebih membagi dataset sebelum melakukan tranformasi ditujukan agar tidak megotori data uji dengan informasi yang di dapat dari data latih. Disini saya membagi proporsi data latih dan uji dengan 90:10 dengan jumlah sampel yaitu 13588.
+![data4](https://user-images.githubusercontent.com/81318203/136744306-5189aeb5-7ce3-46a7-b63f-82b0bf8e5503.jpg)
+
+Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana pada standarisasi ini menggunakan fitur numerik dengan teknik StandarScaler dari library Scikitlearn. Pada standarisasi ini menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Alasan saya menggunakan teknik ini untuk menghindari kebocoran informasi pada data uji dan membuat model semakin baik. Dan bila kita lihat pada gambar dibawah ini nilai mean = 0 dan standar deviasi = 1.
+![data5](https://user-images.githubusercontent.com/81318203/136744364-032e5d96-d6a1-4495-9d00-7ff6e5f130a9.jpg)
+
+## Modeling
+Pada proyek ini saya menggunakan 3 model seperti yang tertera pada solution statements yaitu Decision Tree, Random Forest, dan boosting. Untuk tahapan ini saya menggunakan hyperparameter tuning pada model. Pertama kita menyiapkan data frame terlebih dahulu untuk analisis model. Dimana menggunakan data latih dan data uji yang telah dilakukan pada proses sebelumnya yaitu pada data preparation (train_test_split).
+
+*	Decision Tree
+<br>Seperti penjelasan yang ada pada solution statements, model ini dapat dipakai pada masalah regresi. Pada model ini saya menggunakan teknik DecisionTreeRegressor dari library Scikitlearn. Untuk tahap ini saya hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Disini saya menggunakan parameter *max_depth =12* dan *random_state=30*.</br>
+*	Random Forest
+<br>Pada model ini sendiri tersusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak. Disini saya menggunakan teknik RandomForestRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error dimana menggunakan teknik mean_squared_error dari library Scikitlearn. Disini saya juga menggunakan paramter *n_estimators=35*, *max_depth=12*, *random_state=50*,  dan *n_jobs=-1*.<br>
+* AddBoost(Boosting) 	
+<br>Pada model ini sendiri merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Disini saya menggunakan teknik AdaBoostRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error. Disini saya juga menggunakan paramter n_estimators=35, learning_rate=0.05, dan random_state=30.</br>
+Bila di lihat dari ketiga model ini setelah dilakukan pelatihan maka didapatkan solusi terbaik berada pada model Random Forest dimana penjelasannya akan ada pada tahap “Evaluation”.
+
+## Evaluation
+Disini kita menggunakan metrik yang akan digunakan pada prediksi yaitu Mean Squared Error(MSE) untuk menghitung selisih rata-rata nilai sebenarnya dengan nilai prediksi. Bila didefinisikan dalam persamaan maka akan seperti berikut:
+![mse1](https://user-images.githubusercontent.com/81318203/136745371-24858e44-a2af-439d-a668-345c694f355e.jpg)
+Keterangan:
+N = jumlah dataset
+yi = nilai sebenarnya
+y_pred = nilai prediksi
+
+Langkah selanjutnya sebelum menghitung MSE yaitu melakukan proses scaling dari fitur numerik pada data uji dimana pada langkah sebelumnya telah dilakukan proses scaling pada data latih. Setelah selesai pada proses scaling dilanjutkan ke evaluasi dari tiga model machine learning yaitu Decision Tree, Random Forest, dan Adaboost dengan metrik MSE. Berikut ini merupakan hasil dari evaluasi data latih dan data test yaitu:
+![mse2](https://user-images.githubusercontent.com/81318203/136745438-259d4521-f468-400c-9216-520e26f2df59.jpg)
+
+Bila dilihat dari gambar diatas bahwa mse pada test dan train  dari model Random Forest memiliki nilai yang kecil dibandingkan dengan model mse Decision Tree dan Boosting. Untuk memudahkan melihat metrik diatas maka dibuatkan bar chart seperti gambar dibawah ini. Bila dilihat dari gambar model random forest memiliki nilai error yang lebih kecil sehingga model random forest dijadikan model terbaik dan digunakan untuk prediksi harga jual mobil.
+![grafik](https://user-images.githubusercontent.com/81318203/136745502-4b9260bc-ac0e-4ecd-b345-46b07b1bd0fd.jpg)
+
+Setelah dibuatkan prediksi maka bila dilihat dari gambar dibawah ini yang memberikan prediksi paling mendekati yaitu Random Forest. Sehingga jika kita lihat dari MSE yang memiliki nilai error kecil yaitu model Random forest jadi bisa di pastikan bahwa model ini menjadi solusi baik untuk memprediksi harga jual mobil bekas VW.
+![prediksi](https://user-images.githubusercontent.com/81318203/136745536-8446ce3e-14de-4139-9209-25486ca64017.jpg)
+
+##Kesimpulan
+Dapat disimpulkan berdasarkan problem statement dan goal yang dituliskan diawal bahwa:
+* Fitur yang berpengaruh dengan harga jual mobil VW yaitu ‘year’, ‘mileage’, dan ‘tax’ dimana korelasinya besar dengan price sebagai target
+* Model yang paling tepat dalam memprediksi harga jual mobil bekas yaitu model Random Forest dimana MSE dimiliki nilai errornya kecil dan hasil prediksinya paling mendekati.

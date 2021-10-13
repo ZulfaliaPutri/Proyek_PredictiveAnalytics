@@ -76,7 +76,7 @@ Selanjutnya bila kita analisis dengan teknik Multivariate EDA dari fitur numerik
 
 ![numerik2](https://user-images.githubusercontent.com/81318203/136742696-1d8fd5d9-6f40-4935-a926-8c5ee6b990aa.jpg)
 
-Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fiur numerik yang didapat. Dimana fitur year, mileage, tax dan mpg memiliki nilai korelasi yang besar dengan fitur price seperti mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor 0.48 dan engineSize mendapat skor 0.01. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur year (1) memiliki korelasi yang kecil. Oleh karena itu untuk fitur year di drop karena memiliki korelasi yang lemah.
+Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fitur numerik yang didapat. Dimana fitur year, mileage, tax dan mpg memiliki nilai korelasi yang besar dengan fitur price seperti mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor -0.48 dan engineSize mendapat skor 0.01. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur year (1) memiliki korelasi yang kecil. Oleh karena itu untuk fitur year di drop karena memiliki korelasi yang lemah.
 
 ![korelasi1](https://user-images.githubusercontent.com/81318203/137142229-86f983be-cda8-4cd4-848d-a0f88e4f5e87.jpg)
 

@@ -122,15 +122,15 @@ y_pred = nilai prediksi
 
 Langkah selanjutnya sebelum menghitung MSE yaitu melakukan proses scaling dari fitur numerik pada data uji dimana pada langkah sebelumnya telah dilakukan proses scaling pada data latih. Setelah selesai pada proses scaling dilanjutkan ke evaluasi dari tiga model machine learning yaitu Decision Tree, Random Forest, dan Adaboost dengan metrik MSE. Berikut ini merupakan hasil dari evaluasi data latih dan data test yaitu:
 
-![mse2](https://user-images.githubusercontent.com/81318203/136745438-259d4521-f468-400c-9216-520e26f2df59.jpg)
+![mse3](https://user-images.githubusercontent.com/81318203/137149983-65b53812-dc07-4e52-aa60-a2f3b26721be.jpg)
 
 Bila dilihat dari gambar diatas bahwa mse pada test dan train  dari model Random Forest memiliki nilai yang kecil dibandingkan dengan model mse Decision Tree dan Boosting. Untuk memudahkan melihat metrik diatas maka dibuatkan *bar chart* seperti gambar dibawah ini. Bila dilihat dari gambar model random forest memiliki nilai error yang lebih kecil sehingga model random forest dijadikan model terbaik dan digunakan untuk prediksi harga jual mobil.
 
-![grafik](https://user-images.githubusercontent.com/81318203/136745502-4b9260bc-ac0e-4ecd-b345-46b07b1bd0fd.jpg)
+![mse4](https://user-images.githubusercontent.com/81318203/137150013-87e75168-a45a-4102-890f-064703cb0f55.jpg)
 
 Setelah dibuatkan prediksi maka bila dilihat dari gambar dibawah ini yang memberikan prediksi paling mendekati yaitu Random Forest. Sehingga jika kita lihat dari MSE yang memiliki nilai error kecil yaitu model Random forest jadi bisa di pastikan bahwa model ini menjadi solusi baik untuk memprediksi harga jual mobil bekas VW.
 
-![prediksi](https://user-images.githubusercontent.com/81318203/136745536-8446ce3e-14de-4139-9209-25486ca64017.jpg)
+![mse5](https://user-images.githubusercontent.com/81318203/137150203-fdddfa87-71a8-4a26-bb53-adab06497136.jpg)
 
 ## Kesimpulan
 Dapat disimpulkan berdasarkan problem statement dan goal yang dituliskan diawal bahwa:

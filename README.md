@@ -76,22 +76,25 @@ Selanjutnya bila kita analisis dengan teknik Multivariate EDA dari fitur numerik
 
 ![numerik2](https://user-images.githubusercontent.com/81318203/136742696-1d8fd5d9-6f40-4935-a926-8c5ee6b990aa.jpg)
 
-Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fiur numerik yang didapat. Dimana fitur year, mileage, tax dan mpg memiliki nilai korelasi yang besar dengan fitur price seperti year mendapat skor 1, price mendapat skor 0.62, mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor 0.48. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur engineSize memiliki korelasi yang kecil dimana nilainya mendekati nilai 0 yaitu 0.01. Oleh karena itu untuk fitur engineSize di drop karena memiliki korelasi yang lemah.
+Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fiur numerik yang didapat. Dimana fitur year, mileage, tax dan mpg memiliki nilai korelasi yang besar dengan fitur price seperti mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor 0.48 dan engineSize mendapat skor 0.01. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur year (1) memiliki korelasi yang kecil. Oleh karena itu untuk fitur year di drop karena memiliki korelasi yang lemah.
 
-![korelasi1](https://user-images.githubusercontent.com/81318203/136742764-0f5ad501-c872-40df-b354-8204c9b98516.jpg)
+![korelasi1](https://user-images.githubusercontent.com/81318203/137142229-86f983be-cda8-4cd4-848d-a0f88e4f5e87.jpg)
 
 ## Data Preparation
 Dalam data preparation saya melakukan 3 teknik yaitu one-hot-encoding dimana pada teknik ini menggunakan fitur kategori. Dalam melakukan proses ini terdapat penggunaan fitur get_dummies. Penggunaan proses ini dimaksudkan untuk membuat kolom baru dari fitur kategorikal kita di mana setiap kategori menjadi kolom baru dengan nilai 0 atau 1. Seperti gambar dibawah berikut dimana kategori membuat kolom baru. Alasan saya mengguanakan teknik ini karena pada proses ini masih terdapat kategori sehingga perlu dibuat ke numerik agar model dapat membacanya dengan mudah.
 
-![data2](https://user-images.githubusercontent.com/81318203/136744240-d71f2430-7519-4247-8fb5-2c531abb5e6c.jpg)
-![data3](https://user-images.githubusercontent.com/81318203/136744260-c6da3ccc-2972-4e87-8edc-217f36e0fb4f.jpg)
+![pre2](https://user-images.githubusercontent.com/81318203/137144215-afab514a-9efc-45d1-b192-a0cb6d25d7dc.jpg)
+![pre3](https://user-images.githubusercontent.com/81318203/137143873-f10021e2-a801-4f2c-8020-6b84bbe4c28d.jpg)
 
 Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunakan untuk membagai dataset menjadi data latih dan data uji yang di perlukan sebelum membuat model. Alasan saya melakukan teknik ini agar dapat memberikan hasil prediksi yang lebih akurat untuk data yang belum pernah di latih terlebih membagi dataset sebelum melakukan tranformasi ditujukan agar tidak megotori data uji dengan informasi yang di dapat dari data latih. Disini saya membagi proporsi data latih dan uji dengan 90:10 dengan jumlah sampel yaitu 13588.
+
 ![data4](https://user-images.githubusercontent.com/81318203/136744306-5189aeb5-7ce3-46a7-b63f-82b0bf8e5503.jpg)
 
 Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana pada standarisasi ini menggunakan fitur numerik dengan teknik StandarScaler dari library Scikitlearn. Pada standarisasi ini menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Alasan saya menggunakan teknik ini untuk menghindari kebocoran informasi pada data uji dan membuat model semakin baik. Dan bila kita lihat pada gambar dibawah ini nilai mean = 0 dan standar deviasi = 1.
 
-![data5](https://user-images.githubusercontent.com/81318203/136744364-032e5d96-d6a1-4495-9d00-7ff6e5f130a9.jpg)
+![standarisasi](https://user-images.githubusercontent.com/81318203/137145132-a089253a-76be-4fcf-ba20-19eb460aebc6.jpg)
+
+
 
 ## Modeling
 Pada proyek ini saya menggunakan 3 model seperti yang tertera pada solution statements yaitu Decision Tree, Random Forest, dan boosting. Untuk tahapan ini saya menggunakan hyperparameter tuning pada model. Pertama kita menyiapkan data frame terlebih dahulu untuk analisis model. Dimana menggunakan data latih dan data uji yang telah dilakukan pada proses sebelumnya yaitu pada data preparation (train_test_split).

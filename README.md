@@ -76,7 +76,7 @@ Selanjutnya bila kita analisis dengan teknik Multivariate EDA dari fitur numerik
 
 ![numerik2](https://user-images.githubusercontent.com/81318203/136742696-1d8fd5d9-6f40-4935-a926-8c5ee6b990aa.jpg)
 
-Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fitur numerik yang didapat. Dimana fitur mileage, tax, mpg dan engineSize memiliki nilai korelasi yang besar dengan fitur price seperti mileage -0.77, tax mendapat skor 0.52, mpg mendapat skor -0.48 dan engineSize mendapat skor 0.01. Dari sini terlihat bahwa keempat fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur year memiliki korelasi yang kecil. Oleh karena itu untuk fitur year di drop karena memiliki korelasi yang lemah.
+Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik untuk fitur numerik yang didapat. Dimana fitur year, tax dan engineSize memiliki nilai korelasi yang besar dengan fitur price. Dari sini terlihat bahwa ketiga fitur itu memiliki korelasi tinggi dengan price. Sedangkan pada fitur mileage dan mpg memiliki korelasi yang kecil. Oleh karena itu untuk fitur mileage dan mpg di drop karena memiliki korelasi yang lemah.
 
 ![korelasi1](https://user-images.githubusercontent.com/81318203/137142229-86f983be-cda8-4cd4-848d-a0f88e4f5e87.jpg)
 
@@ -134,5 +134,5 @@ Setelah dibuatkan prediksi maka bila dilihat dari gambar dibawah ini yang member
 
 ## Kesimpulan
 Dapat disimpulkan berdasarkan problem statement dan goal yang dituliskan diawal bahwa:
-* Fitur yang berpengaruh dengan harga jual mobil VW yaitu ‘mileage’, ‘tax’, 'mpg' dan 'engineSize' dimana korelasinya besar dengan price sebagai target
+* Fitur yang berpengaruh dengan harga jual mobil VW yaitu ‘year’, ‘tax’ dan 'engineSize' dimana korelasinya besar dengan price sebagai target
 * Model yang paling tepat dalam memprediksi harga jual mobil bekas yaitu model Random Forest dimana MSE dimiliki nilai errornya kecil dan hasil prediksinya paling mendekati.

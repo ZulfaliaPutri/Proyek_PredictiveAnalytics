@@ -83,8 +83,9 @@ Bila kita lihat pada gambar dibawah ini kita dapat mengamati korelasi matrik unt
 ## Data Preparation
 Dalam data preparation saya melakukan 3 teknik yaitu one-hot-encoding dimana pada teknik ini menggunakan fitur kategori. Dalam melakukan proses ini terdapat penggunaan fitur get_dummies. Penggunaan proses ini dimaksudkan untuk membuat kolom baru dari fitur kategorikal kita di mana setiap kategori menjadi kolom baru dengan nilai 0 atau 1. Seperti gambar dibawah berikut dimana kategori membuat kolom baru. Alasan saya mengguanakan teknik ini karena pada proses ini masih terdapat kategori sehingga perlu dibuat ke numerik agar model dapat membacanya dengan mudah.
 
-![pre2](https://user-images.githubusercontent.com/81318203/137144215-afab514a-9efc-45d1-b192-a0cb6d25d7dc.jpg)
-![pre3](https://user-images.githubusercontent.com/81318203/137143873-f10021e2-a801-4f2c-8020-6b84bbe4c28d.jpg)
+![prep1](https://user-images.githubusercontent.com/81318203/137664780-d2d4cdec-5d3e-4a6e-b876-84d4c8431b3a.jpg)
+![prep2](https://user-images.githubusercontent.com/81318203/137664862-20d4784b-cf88-4232-ad94-ac2e2c70b558.jpg)
+
 
 Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunakan untuk membagai dataset menjadi data latih dan data uji yang di perlukan sebelum membuat model. Alasan saya melakukan teknik ini agar dapat memberikan hasil prediksi yang lebih akurat untuk data yang belum pernah di latih terlebih membagi dataset sebelum melakukan tranformasi ditujukan agar tidak megotori data uji dengan informasi yang di dapat dari data latih. Disini saya membagi proporsi data latih dan uji dengan 90:10 dengan jumlah sampel yaitu 13588.
 
@@ -92,7 +93,7 @@ Selanjutnya, saya menggunakan teknik “train-test-split”, teknik ini digunaka
 
 Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana pada standarisasi ini menggunakan fitur numerik dengan teknik StandarScaler dari library Scikitlearn. Pada standarisasi ini menghasilkan distribusi dengan standar deviasi sama dengan 1 dan mean sama dengan 0. Alasan saya menggunakan teknik ini untuk menghindari kebocoran informasi pada data uji dan membuat model semakin baik. Dan bila kita lihat pada gambar dibawah ini nilai mean = 0 dan standar deviasi = 1.
 
-![standarisasi](https://user-images.githubusercontent.com/81318203/137145132-a089253a-76be-4fcf-ba20-19eb460aebc6.jpg)
+![des](https://user-images.githubusercontent.com/81318203/137665149-401cc6c0-59da-4798-bf92-6676dc6d02d2.jpg)
 
 
 
@@ -100,11 +101,11 @@ Tahap terakhir yang saya gunakan pada persiapan data yaitu standarisasi. Dimana 
 Pada proyek ini saya menggunakan 3 model seperti yang tertera pada solution statements yaitu Decision Tree, Random Forest, dan boosting. Untuk tahapan ini saya menggunakan hyperparameter tuning pada model. Pertama kita menyiapkan data frame terlebih dahulu untuk analisis model. Dimana menggunakan data latih dan data uji yang telah dilakukan pada proses sebelumnya yaitu pada data preparation (train_test_split).
 
 *	Decision Tree
-<br>Seperti penjelasan yang ada pada solution statements, model ini dapat dipakai pada masalah regresi. Pada model ini saya menggunakan teknik DecisionTreeRegressor dari library Scikitlearn. Untuk tahap ini saya hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Disini saya menggunakan parameter *max_depth =12* dan *random_state=30*.</br>
+<br>Seperti penjelasan yang ada pada solution statements, model ini dapat dipakai pada masalah regresi. Pada model ini saya menggunakan teknik DecisionTreeRegressor dari library Scikitlearn. Untuk tahap ini saya hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Disini saya menggunakan parameter *max_depth =10* dan *random_state=50*.</br>
 *	Random Forest
-<br>Pada model ini sendiri tersusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak. Disini saya menggunakan teknik RandomForestRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error dimana menggunakan teknik mean_squared_error dari library Scikitlearn. Disini saya juga menggunakan paramter *n_estimators=35*, *max_depth=12*, *random_state=50*,  dan *n_jobs=-1*.<br>
+<br>Pada model ini sendiri tersusun dari banyak decision tree yang pembagian data dan fiturnya dipilih secara acak. Disini saya menggunakan teknik RandomForestRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error dimana menggunakan teknik mean_squared_error dari library Scikitlearn. Disini saya juga menggunakan paramter *n_estimators=35*, *max_depth=10*, *random_state=20*,  dan *n_jobs=-1*.<br>
 * AddBoost(Boosting) 	
-<br>Pada model ini sendiri merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Disini saya menggunakan teknik AdaBoostRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error. Disini saya juga menggunakan paramter n_estimators=35, learning_rate=0.05, dan random_state=30.</br>
+<br>Pada model ini sendiri merupakan algoritma ensemble yang memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi. Disini saya menggunakan teknik AdaBoostRegressor dari library Scikitlearn dimana pada tahap ini pun hanya melatih data training dan menyimpan data testing untuk dilatih di tahap evaluasi. Ditahap ini juga terdapat penggunaan metrik Mean Square Error. Disini saya juga menggunakan paramter n_estimators=35, learning_rate=0.05, dan random_state=40.</br>
 
 Bila di lihat dari ketiga model ini setelah dilakukan pelatihan maka didapatkan solusi terbaik berada pada model Random Forest dimana penjelasannya akan ada pada tahap “Evaluation”.
 
@@ -122,15 +123,17 @@ y_pred = nilai prediksi
 
 Langkah selanjutnya sebelum menghitung MSE yaitu melakukan proses scaling dari fitur numerik pada data uji dimana pada langkah sebelumnya telah dilakukan proses scaling pada data latih. Setelah selesai pada proses scaling dilanjutkan ke evaluasi dari tiga model machine learning yaitu Decision Tree, Random Forest, dan Adaboost dengan metrik MSE. Berikut ini merupakan hasil dari evaluasi data latih dan data test yaitu:
 
-![mse3](https://user-images.githubusercontent.com/81318203/137149983-65b53812-dc07-4e52-aa60-a2f3b26721be.jpg)
+![mse6](https://user-images.githubusercontent.com/81318203/137665237-19673b29-bd1f-4354-ad89-8c95d68adf22.jpg)
 
 Bila dilihat dari gambar diatas bahwa mse pada test dan train  dari model Random Forest memiliki nilai yang kecil dibandingkan dengan model mse Decision Tree dan Boosting. Untuk memudahkan melihat metrik diatas maka dibuatkan *bar chart* seperti gambar dibawah ini. Bila dilihat dari gambar model random forest memiliki nilai error yang lebih kecil sehingga model random forest dijadikan model terbaik dan digunakan untuk prediksi harga jual mobil.
 
-![mse4](https://user-images.githubusercontent.com/81318203/137150013-87e75168-a45a-4102-890f-064703cb0f55.jpg)
+![gambar](https://user-images.githubusercontent.com/81318203/137665272-d7d5c8c3-6271-4a53-b4f0-34cce90eb3e6.jpg)
+
 
 Setelah dibuatkan prediksi maka bila dilihat dari gambar dibawah ini yang memberikan prediksi paling mendekati yaitu Random Forest. Sehingga jika kita lihat dari MSE yang memiliki nilai error kecil yaitu model Random forest jadi bisa di pastikan bahwa model ini menjadi solusi baik untuk memprediksi harga jual mobil bekas VW.
 
-![mse5](https://user-images.githubusercontent.com/81318203/137150203-fdddfa87-71a8-4a26-bb53-adab06497136.jpg)
+![predik](https://user-images.githubusercontent.com/81318203/137665281-f96db11f-9417-4fe5-9e61-fbf6e99d2f11.jpg)
+
 
 ## Kesimpulan
 Dapat disimpulkan berdasarkan problem statement dan goal yang dituliskan diawal bahwa:
